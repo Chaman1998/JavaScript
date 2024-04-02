@@ -36,3 +36,33 @@ const myFunction = function () {
 }
 console.log(typeof myFunction);
 myFunction();
+
+// =======================================================
+
+// Stack (Primitive), Heap (None-Primitive)
+
+//Ex: Stack Memory
+//Primitive datatype
+let myName = "Chaman"
+
+let anotherName = myName
+
+anotherName = "Koushik"
+
+console.log(myName);
+console.log(anotherName);
+
+//---------------------------------------------
+//Ex: Heap Memory
+//Non-Primitive datatype
+let userOne = {
+    email: "abc@gmail.com",
+    upi: "use@upi"
+}
+
+let userTwo = userOne
+
+userTwo.email = "xyz@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
