@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black {
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <h1 id="title" class="heading">DOM learning</h1>
+    <h2 id="title" class="heading">DOM learning</h2>
+    <h2 id="title" class="heading">DOM learning</h2>
+    <h2 id="title" class="heading">DOM learning</h2>
+    <h2 id="title" class="heading">DOM learning</h2>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis corrupti facere ex quas dicta nostrum repellat
+        exercitationem, facilis ipsum pariatur doloribus a fuga optio. Incidunt animi dolorem maxime cumque sequi?</p>
+    <br />
+    <p>run this codes and try on browser:
+        <br />
+    <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+        <li class="list-item">Four</li>
+    </ul>
+    1. document.getElementById('title').getAttribute('id')<br />
+    2. document.getElementById('title').setAttribute('class','test heading')<br />
+    3. const title = document.getElementById('title')<br />
+    title<br />
+    4.title.style.backgroundColor='black'<br />
+    'black'<br />
+    5. title.style.backgroundColor='red'<br />
+    'red'<br />
+    6. title.style.padding='15px'<br />
+    '15px'<br />
+    7. title.textContent="Hello"<br />
+    'Hello'<br />
+    8. title.innerHTML<br />
+    'Hello'<br />
+    9. title.innerText<br />
+    'Hello'<br />
+    10. title.textContent<br />
+    'DOM learning'<br />
+    11. title.innerHTML<br />
+    'DOM learning'<br />
+    12. title.innerText<br />
+    'DOM learning'<br />
+    13. document.querySelector("ul")<br />
+    '<ul>''</'ul'>'<br />
+    14. const myul = document.querySelector("ul")<br />
+    15. myul.querySelector('li')<br />
+    '<li></li>'<br />
+    16. const turnGreen = myul.querySelector("li")<br />
+    17. turnGreen.style.backgroundColor = "green"<br />
+    'green'<br />
+    18. turnGreen.style.padding = "10px"<br />
+    '10px'<br />
+    19. turnGreen.innerText<br />
+    'one'<br />
+    20. turnGreen.innerText = "five"<br />
+    'five'<br />
+    21. document.quesrySelectorAll('li')<br />
+        NodeList(3) [li,li,li]<br />
+    22. const tempList = document.quesrySelectorAll('li')<br />
+    23. tempList[0].style.color='green'<br />
+        'green'<br />
+    24. const myh1 = document.querySelectorAll('h1')<br />
+    25. myh1[0].style.color="green"<br />
+        'green'<br />
+    26. templist.forEach(function (l) {
+        l.style.backgroundColor = 'green'
+    })<br />
+    27. const tempClassList = document.getElementsByClassName('list-item')<br />
+    28. Array.from(tempClassList)
+    29. const myConvertedArray = Array.from(tempClassList)
+    30. myConvertedArray.forEach(function(li){
+        li.style.color = 'orange'
+    })
+    31. 
+    </p>
+</body>
+
+</html>
