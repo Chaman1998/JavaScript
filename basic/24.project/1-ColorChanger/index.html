@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #212121;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: white;
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: center;
+            gap: 20px; /* Add some spacing between the links */
+            padding: 10px;
+            border-bottom: 1px solid black;
+        }
+
+        nav a {
+            color: #000; /* Make sure links are visible on a white background */
+            text-decoration: none; /* Remove underline from links */
+            font-size: 18px; /* Adjust the font size if needed */
+            padding: 8px 12px;
+            margin: 8px 15px;
+            transition: font-size 0.3s ease;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        nav a:first-child {
+            background-color: #aaa7a7;
+        }
+
+        main {
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column; /* Arrange children in a column */
+            justify-content: center; /* Center children vertically */
+            align-items: center; /* Center children horizontally */
+            /* Make main take up the full viewport height minus nav height */
+            /* height: calc(100vh - 50px); */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .canvas .button {
+            display: inline-block; /* Make the spans inline-block for horizontal alignment */
+            width: 80px; /* Set a fixed width */
+            height: 80px; /* Set a fixed height */
+            margin: 10px 10px; /* Add some horizontal spacing */
+            border: 2px solid black; /* Add black border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        #grey {
+            background-color: grey;
+        }
+
+        #white {
+            background-color: white;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="http://www.youtube.com">Youtube</a>
+    </nav>
+    <main>
+        <div class="canvas">
+            <h1>Color Scheme Switcher</h1>
+            <span class="button" id="grey"></span>
+            <span class="button" id="white"></span>
+            <span class="button" id="blue"></span>
+            <span class="button" id="yellow"></span>
+            <h2>Try clicking on one of the colors above</h2>
+            <h3>to change the background color of this page!</h3>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

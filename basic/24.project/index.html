@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        nav {
+            background-color: white;
+            display: flex;
+            /* Use flexbox for horizontal alignment */
+            justify-content: center;
+            gap: 20px;
+            /* Add some spacing between the links */
+            padding: 5px;
+        }
+
+        nav a {
+            color: #000;
+            /* Make sure links are visible on a white background */
+            text-decoration: none;
+            /* Remove underline from links */
+            font-size: 18px;
+            /* Adjust the font size if needed */
+            padding: 8px 12px;
+            margin: 8px 15px;
+            transition: font-size 0.3s ease;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        nav a:first-child {
+            background-color: #aaa7a7;
+        }
+
+        main {
+            display: flex;
+            /* Use flexbox for centering */
+            flex-direction: column;
+            /* Arrange children in a column */
+            justify-content: center;
+            /* Center children vertically */
+            align-items: center;
+            /* Make main take up the full viewport height */
+            padding: 20px;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            /* Arrange project links in a column */
+            gap: 10px;
+            /* Add some space between the project links */
+            max-width: 400px;
+        }
+
+        .project-link {
+            width: 100%;
+            background-color: white;
+            /* Set background color to white */
+            color: #000;
+            /* Set text color to black */
+            padding: 15px;
+            /* Add padding for better appearance */
+            text-decoration: none;
+            /* Remove underline from links */
+            border-radius: 5px;
+            /* Add some border radius */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Add subtle shadow */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .project-link:hover {
+            background-color: #949090;
+            /* Change background color on hover */
+            color: #010101;
+            /* Keep text color black on hover */
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="http://www.youtube.com">Youtube</a>
+    </nav>
+    <main>
+        <h1>Hello Guys</h1>
+        <div class="projects">
+            <a href="./1-ColorChanger/index.html" class="project-link">Project One - Color Changer</a>
+            <a href="./2-BMICalculator/index.html" class="project-link">Project Two - BMI Generator</a>
+            <a href="./3-DigitalClock/index.html" class="project-link">Project Three - Digital Clock</a>
+            <a href="./4-GuessTheNumber/index.html" class="project-link">Project Four - Guess the number</a>
+        </div>
+    </main>
+</body>
+<script src="main.js"></script>
+
+</html>
