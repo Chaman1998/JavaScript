@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Wellcome</h1>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    // =========================setTimeout()====================================
+    // setTimeout(function(){
+    //     console.log("Chaman");          //Here in this function print after 2 sec once
+    // },2000)
+
+    // =========================setInterval()===================================
+    // setInterval(function(){
+    //     console.log("again");        //Here in this function and again with 3 sec gap
+    // },3000)
+
+    //=============Call my name after 2 sec using create a function=============
+    // const sayChaman = function(){
+    //     console.log("Chaman");
+    // }
+    // setTimeout(sayChaman,2000)
+
+    // ==============Change in H1 tag after 2sec===============================
+    const changeText = function(){
+        document.querySelector("h1").innerHTML = "Complete JavaScript..."
+    }
+    const changeMe = setTimeout(changeText,2000)
+
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+    clearTimeout()
+
+</script>
+
+</html>
