@@ -1,0 +1,25 @@
+Javascript:-----
+            1. Synchronous
+            2. Single Threaded
+
+Exception Context:
+            1. execute one line of code at a time
+            2. Console log-> 1
+            3. console log-> 2
+
+            i> CALL STACK             ii> MEMORY HEAP
+
+
+Blocking Code                           VS                      Non Blocking Code
+      |                                                               |
+      |                                                               |
+Block the flow of Program                                      Read File Async
+      |                                                               |
+      |                                                               |
+    Read File Sync                                               
+
+DOM API
+Set Timeout
+Set Interval
+fetch()
+
