@@ -59,29 +59,11 @@
             max-width: 400px;
         }
 
-        .project-link {
-            width: 100%;
-            background-color: white;
-            /* Set background color to white */
-            color: #000;
-            /* Set text color to black */
-            padding: 15px;
-            /* Add padding for better appearance */
-            text-decoration: none;
-            /* Remove underline from links */
-            border-radius: 5px;
-            /* Add some border radius */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Add subtle shadow */
-            transition: background-color 0.3s ease, color 0.3s ease;
-            /* Smooth transition */
-        }
-
-        .project-link:hover {
-            background-color: #949090;
-            /* Change background color on hover */
-            color: #010101;
-            /* Keep text color black on hover */
+        table,
+        th,
+        td {
+            border: 1px solid #e7e7e7;
+            border-radius: 2px;
         }
     </style>
 </head>
@@ -94,13 +76,12 @@
     <main>
         <h1>Hello Guys</h1>
         <div class="projects">
-            <a href="./1-BackgroundColor/index.html" class="project-link">Project One - Background Color Change</a>
-            <a href="./2-BMICalculator/index.html" class="project-link">Project Two - BMI Generator</a>
-            <a href="./3-DigitalClock/index.html" class="project-link">Project Three - Digital Clock</a>
-            <a href="./4-GuessTheNumber/index.html" class="project-link">Project Four - Guess the number</a>
+            <div id="insert">
+                <div class="key">Press the key and watch magic.</div>
+            </div>
         </div>
     </main>
 </body>
-<!-- <script src="main.js"></script> -->
+<script src="main.js"></script>
 
 </html>
