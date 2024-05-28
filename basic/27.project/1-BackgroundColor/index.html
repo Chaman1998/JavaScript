@@ -58,46 +58,27 @@
             /* Add some space between the project links */
             max-width: 400px;
         }
-
-        .project-link {
-            width: 100%;
-            background-color: white;
-            /* Set background color to white */
-            color: #000;
-            /* Set text color to black */
-            padding: 15px;
-            /* Add padding for better appearance */
-            text-decoration: none;
-            /* Remove underline from links */
-            border-radius: 5px;
-            /* Add some border radius */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Add subtle shadow */
-            transition: background-color 0.3s ease, color 0.3s ease;
-            /* Smooth transition */
-        }
-
-        .project-link:hover {
-            background-color: #949090;
-            /* Change background color on hover */
-            color: #010101;
-            /* Keep text color black on hover */
+        .projects button {
+            width: 150px;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 4px 4px black;
         }
     </style>
 </head>
 
 <body style="background-color: #212121; color: #fff;">
     <nav>
-        <a href="../index.html" aria-current="page">Home</a>
+        <a href="/index.html" aria-current="page">Home</a>
         <a target="_blank" href="http://www.youtube.com">Youtube</a>
     </nav>
     <main>
-        <h1>Hello Guys</h1>
+        <h1>Hello Guys, Change the Background Color.</h1>
         <div class="projects">
-            <a href="./1-ColorChanger/index.html" class="project-link">Project One - Color Changer</a>
-            <a href="./2-BMICalculator/index.html" class="project-link">Project Two - BMI Generator</a>
-            <a href="./3-DigitalClock/index.html" class="project-link">Project Three - Digital Clock</a>
-            <a href="./4-GuessTheNumber/index.html" class="project-link">Project Four - Guess the number</a>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
         </div>
     </main>
 </body>
