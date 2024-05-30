@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        nav {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 5px;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 12px;
+            margin: 8px 15px;
+            transition: font-size 0.3s ease;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        nav a:first-child {
+            background-color: #aaa7a7;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #e7e7e7;
+            border-radius: 2px;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="http://www.youtube.com">Youtube</a>
+    </nav>
+    <main>
+        <h2>XMLHttpRequest: readyState property</h2>
+        <div class="projects">
+            <!-- XMLHttpRequest readyState values table -->
+            <table>
+                <thead>
+                    <tr style="color: #000;">
+                        <th>Value</th>
+                        <th>State</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>UNSENT</td>
+                        <td>Client has been created. open() not called yet.</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>OPENED</td>
+                        <td>open() has been called.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>HEADERS_RECEIVED</td>
+                        <td>send() has been called, and headers and status are available.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>LOADING</td>
+                        <td>Downloading; responseText holds partial data.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>DONE</td>
+                        <td>The operation is complete.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/Chaman1998"
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    // console.log(xhr.readyState);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            // console.log(this.responseText);
+            // const data = this.responseText;
+            // console.log(typeof data);       //Check the type of data we fetch
+
+            const data = JSON.parse(this.responseText);     //Change string data to JSON data
+            // console.log(data.login);
+            console.log(typeof data);
+            console.log(data.followers);
+        }
+    }
+    xhr.send();
+</script>
+</html>
